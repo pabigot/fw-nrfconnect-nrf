@@ -1,0 +1,30 @@
+# Copyright (c) 2020, Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  Two ADC channels with properties for an RC divider.
+
+compatible: "my,app"
+
+include: base.yaml
+
+properties:
+  io-channels:
+    required: true
+    type: phandle-array
+    description: op-amp and rc-output channels
+
+  io-channel-names:
+    required: false
+    type: string-array
+    description: ordered names of channels
+
+  rc-ohm:
+    required: true
+    type: int
+    description: Resistance in RC divider, ohm
+
+  rc-ufarad:
+    required: true
+    type: int
+    description: Capacitance in RC divider, uF

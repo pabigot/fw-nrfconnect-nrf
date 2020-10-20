@@ -1,0 +1,12 @@
+// Copyright (c) 2020, Nordic Semiconductor ASA
+// SPDX-License-Identifier: Apache-2.0
+
+/ {
+    my,node {
+      compatible = "my,app";
+      io-channels = <&adc 0>, <&adc 1>;
+      io-channel-names = "OP-AMP", "RC-OUT";
+      rc-ohm = <10000>;
+      rc-ufarad = <100>;
+    };
+};
